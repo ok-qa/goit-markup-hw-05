@@ -78,12 +78,21 @@ p {
 	display: flex;
 	align-items: center;
 }
+
+.header-item:not(:last-child) {
+	margin-right: 40px;
+  }
+
 .nav-item {
+	padding-top: 24px;
 	color: var(--base-color);
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.5;
-	position: relative;
+	cursor: pointer;
+	
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 100ms;
 }
 
 .nav-item:focus,
@@ -93,12 +102,16 @@ p {
 }
 
 .nav-item.active::after{
-	content: "";
+	content: '';
+	display: block;
+	position: relative; 
 	width: 100%;
 	height: 4px;
 	background-color: var(--pressed-state);
-	position: absolute;
+	border-radius: 2px;
+	bottom: -25px;
 }
+
 
 .contacts{
 	display: flex;
@@ -114,11 +127,12 @@ p {
 	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 100ms;
 }
 
-.header-item:not(:last-child) {
-	margin-right: 40px;
-  }
+
 
 .contact-email:hover,
 .contact-email:active,
@@ -189,13 +203,6 @@ p {
 
 }
 
-.header-button:hover,
-.header-button:focus {
-	color: var(--primary-white);
-	background-color: var(--pressed-state);
-	/* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
-}
-
 .header-button {
 	padding: 20px 32px;
 
@@ -211,6 +218,16 @@ p {
 	border-radius: 4px;
 	border: none;
 	cursor: pointer;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 100ms;
+}
+
+.header-button:hover,
+.header-button:focus {
+	color: var(--primary-white);
+	background-color: var(--pressed-state);
+	/* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);  */
 }
 
 
@@ -271,14 +288,6 @@ img{
 	margin-right: 24px;
 }
 
-.feature-icon:is(:hover, :focus, :active) {
-	box-shadow:0px 2px 2px rgb(46 47 66 / 8%),
-				0px 2px 2px rgb(46 47 66 / 16%),
-				0px 2px 2px rgb(46 47 66 / 8%);
-	border-radius: 4px;
-	cursor: pointer;
-  }
-
 .feature-item{
 	width: calc((100% - 72px) / 4);
 }
@@ -292,7 +301,19 @@ img{
 	height: 112px;
 	background-color: var(--light-backgroung);
 	border-radius: 4px;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 100ms;
 }
+
+
+.feature-icon:is(:hover, :focus, :active) {
+	box-shadow:0px 2px 2px rgb(46 47 66 / 8%),
+				0px 2px 2px rgb(46 47 66 / 16%),
+				0px 2px 2px rgb(46 47 66 / 8%);
+	border-radius: 4px;
+	cursor: pointer;
+  }
 
 
 /* What are we doing / About us */
@@ -384,6 +405,9 @@ img{
 	height: 100%;
 	border-radius: 50%;
 	background-color: var(--primary-link-color);
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 100ms;
 }
 
 .team-social-link:is(:hover, :focus, :active){
@@ -410,7 +434,10 @@ img{
   	height: 100%;
   	border: 1px solid var(--subtle-text);
   	border-radius: 4px;
-  	cursor: pointer;	
+  	cursor: pointer;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 100ms;
   }
 
   .customer-item:is(:hover, :focus, :active) {
@@ -497,6 +524,9 @@ img{
 	height: 100%;
 	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 100ms;
   }
 
   .footer-social-link:is(:hover, :focus, :active) {
@@ -525,13 +555,20 @@ margin-bottom: 72px;
 	line-height: 1.5;
 	letter-spacing: 0.04em;
 	text-align: center;
+
 	background-color: var(--accent-color);
 	color: var(--primary-link-color);
 	border: 1px solid #E7E9FC;
 	border-radius: 4px;
 	min-width: 69px;
-  min-height: 48px;
-  padding: 12px 24px;
+  	min-height: 48px;
+  	padding: 12px 24px;
+
+	transition: background-col	or 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 100ms;
+
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 100ms;
 }
 
 .portfolio-btn:active,
@@ -542,7 +579,7 @@ margin-bottom: 72px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 }
-
+				
 .portfolio-list{
 	display: flex;
   	flex-wrap: wrap;
@@ -589,6 +626,9 @@ margin-bottom: 72px;
 
 .portfolio-item-link {
 	display: block;
+
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 100ms;	
 }
 
 .portfolio-item-link:is(:hover, :focus, :active){
