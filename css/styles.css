@@ -564,11 +564,8 @@ margin-bottom: 72px;
   	min-height: 48px;
   	padding: 12px 24px;
 
-	transition: background-col	or 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	transition-delay: 100ms;
-
-	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	transition-delay: 100ms;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 250ms,
+				box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), 250ms;
 }
 
 .portfolio-btn:active,
@@ -579,7 +576,7 @@ margin-bottom: 72px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 }
-				
+
 .portfolio-list{
 	display: flex;
   	flex-wrap: wrap;
@@ -627,8 +624,7 @@ margin-bottom: 72px;
 .portfolio-item-link {
 	display: block;
 
-	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	transition-delay: 100ms;	
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), 100ms;	
 }
 
 .portfolio-item-link:is(:hover, :focus, :active){
