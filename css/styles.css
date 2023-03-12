@@ -76,7 +76,6 @@ p {
 
 .nav-list{
 	display: flex;
-	align-items: center;
 }
 
 .header-item:not(:last-child) {
