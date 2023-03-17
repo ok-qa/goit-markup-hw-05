@@ -218,7 +218,7 @@ p {
 	border: none;
 	cursor: pointer;
 
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: backgroung-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	transition-delay: 100ms;
 }
 
@@ -226,6 +226,7 @@ p {
 .header-button:focus {
 	color: var(--primary-white);
 	background-color: var(--pressed-state);
+	
 	/* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);  */
 }
 
@@ -669,20 +670,17 @@ margin-bottom: 72px;
 	color: var(--primary-white);
 }
 
-
-.backdrop{
-	width:100%;
+.backdrop {
+	width: 100%;
 	height: 100%;
+	background-color: rgba(46, 47, 66, 0.4);
+
 	position: fixed;
 	top: 0;
 	left: 0;
-	background-color: var(--base-color);
 
-	/* transition: opacity linear 700ms cubic-bezier(0.4, 0, 0.2, 1);
-	transition-delay: 250ms; */
 	transition: visibility linear  250ms cubic-bezier(0.4, 0, 0.2, 1), 100ms; 
 }
-
 
 .backdrop .is-hidden .modal{
 	transform: translate(-50%, -50%) scale(0);
@@ -706,13 +704,22 @@ margin-bottom: 72px;
 	transition: transform 250 cubic-bezier(04, 0 0.2, 1), 100ms;
 }
 
-.modal-close{
+.modal-close {
 	display: block;
 	margin-left: auto;
-	width: 24px;
-	height: 24px;
-	border-radius: 50%;
-	border: 2px;
+
+	width: 20px;
+	height: 20px;
+	border: solid 1px;
+	border-radius: 50%
+}
+
+.icon-close {
+	width: 6px;
+	height: 10px;
+	display: block;
+	margin-left: auto;
+	fill: var(--base-color)
 }
 
 .is-hidden{
@@ -720,4 +727,3 @@ margin-bottom: 72px;
 	visibility: hidden;
 	pointer-events: none;
 }
-
